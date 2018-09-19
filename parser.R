@@ -9,7 +9,7 @@ domain <-
 url_pattern <-
   "http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
 
-"C:/Users/abreza/Downloads/Wikipedia-20180919171309.xml" %>% 
+"Wikipedia-20180919171309.xml" %>% # Replace with a file exported from https://en.wikipedia.org/wiki/Special:Export
   readLines() %>% 
   str_extract_all(url_pattern) %>% 
   unlist() %>% 
